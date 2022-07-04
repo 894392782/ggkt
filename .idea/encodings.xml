@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="GBK">
+    <file url="file://$PROJECT_DIR$/ggkt_parent/common/service_utils/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ggkt_parent/common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ggkt_parent/common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ggkt_parent/model/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ggkt_parent/service/service_vod/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ggkt_parent/service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ggkt_parent/service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ggkt_parent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ggkt_parent/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>
 </project>
