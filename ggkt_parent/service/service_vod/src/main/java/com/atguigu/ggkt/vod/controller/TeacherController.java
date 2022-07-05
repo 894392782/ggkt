@@ -130,5 +130,34 @@ public class TeacherController {
             return Result.fail(null).message("修改失败");
         }
     }
+
+    //批量删除
+    //以json数组格式传递
+    @ApiOperation("批量删除讲师")
+    @DeleteMapping("removeBatch")
+    public Result removeBatch(@RequestBody List<Long> idList){
+        boolean isSuccess = teacherService.removeByIds(idList);
+        if (isSuccess){
+            return Result.ok(null).message("删除成功");
+        }else {
+            return Result.fail(null).message("删除失败");
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
