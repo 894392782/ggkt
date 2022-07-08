@@ -10,7 +10,6 @@ import com.atguigu.ggkt.vod.service.VideoService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import org.apache.commons.collections4.BagUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -59,5 +58,12 @@ public class ChapterServiceImpl extends ServiceImpl<ChapterMapper, Chapter> impl
             chapterVo.setChildren(videoVoList);
         }
         return finalChapterList;
+    }
+
+    @Override
+    public void removeChapterByCourseId(Long id) {
+        QueryWrapper<Chapter> wrapper = new QueryWrapper<>();
+        wrapper.eq("course_id",id);
+        baseMapper.delete(wrapper);
     }
 }

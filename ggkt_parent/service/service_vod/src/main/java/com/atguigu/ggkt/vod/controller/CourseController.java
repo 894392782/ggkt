@@ -69,5 +69,11 @@ public class CourseController {
         courseService.publishCourse(id);
         return Result.ok(null);
     }
+
+    @DeleteMapping("remove/{id}")
+    public Result remove(@PathVariable Long id){
+        courseService.removeCourseId(id);
+        return Result.ok(null);
+    }
 }
 
