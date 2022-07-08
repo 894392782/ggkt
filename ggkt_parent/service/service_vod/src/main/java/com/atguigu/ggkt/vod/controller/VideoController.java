@@ -1,12 +1,18 @@
 package com.atguigu.ggkt.vod.controller;
 
 
+import com.atguigu.ggkt.exception.GgktException;
 import com.atguigu.ggkt.model.vod.Video;
 import com.atguigu.ggkt.result.Result;
 import com.atguigu.ggkt.vod.service.VideoService;
+import com.atguigu.ggkt.vod.service.VodService;
+import com.atguigu.ggkt.vod.utils.ConstantPropertiesUtil;
+import com.atguigu.ggkt.vod.utils.Signature;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Random;
 
 /**
  * <p>
@@ -18,10 +24,12 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/admin/vod/video")
-@CrossOrigin
 public class VideoController {
     @Autowired
     private VideoService videoService;
+
+    @Autowired
+    private VodService vodService;
 
     @ApiOperation(value = "获取")
     @GetMapping("get/{id}")
@@ -47,8 +55,16 @@ public class VideoController {
     @ApiOperation(value = "删除")
     @DeleteMapping("remove/{id}")
     public Result remove(@PathVariable Long id) {
-        videoService.removeById(id);
+        videoService.removeVideoById(id);
         return Result.ok(null);
     }
+
+/*    @DeleteMapping("remove/{fileId}")
+    public Result remove(@PathVariable String fileId){
+        vodService.removeVideo(fileId);
+        return Result.ok(null);
+    }*/
+
+
 }
 

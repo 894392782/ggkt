@@ -7,9 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="service_vod" />
-        <module name="service_utils" />
+        <module name="service_gateway" />
+        <module name="service_order" />
         <module name="model" />
+        <module name="service_utils" />
+        <module name="service_vod" />
       </profile>
     </annotationProcessing>
   </component>
@@ -19,6 +21,8 @@
       <module name="ggkt_parent" options="-parameters" />
       <module name="model" options="-parameters" />
       <module name="service" options="-parameters" />
+      <module name="service_gateway" options="-parameters" />
+      <module name="service_order" options="-parameters" />
       <module name="service_utils" options="-parameters" />
       <module name="service_vod" options="-parameters" />
     </option>
