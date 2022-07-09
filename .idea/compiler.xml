@@ -11,6 +11,7 @@
         <module name="service_activity" />
         <module name="service_user" />
         <module name="service_user_client" />
+        <module name="service_wechat" />
         <module name="service_utils" />
         <module name="service_vod" />
         <module name="service_order" />
@@ -32,6 +33,7 @@
       <module name="service_user_client" options="-parameters" />
       <module name="service_utils" options="-parameters" />
       <module name="service_vod" options="-parameters" />
+      <module name="service_wechat" options="-parameters" />
     </option>
   </component>
 </project>
